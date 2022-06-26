@@ -1,4 +1,4 @@
-# Smooth Scroll and get-currentActive Navbar Tab w/o Package
+# Smooth Scroll, currentActive Navbar Tab, hide-show navbar on scroll w/o Package
 
 this app will smoothly scroll to the different section of the website and the top header bar also change according to the current active nav section
 

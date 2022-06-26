@@ -11,9 +11,22 @@ const Header = () => {
 		document.getElementById(navs.toLowerCase()).scrollIntoView({ behavior: "smooth" });
 	};
 
+	useEffect(() => {
+		let lastScrollY = window.scrollY;
+		const navbar = document.querySelector(".navbar");
+		window.addEventListener("scroll", () => {
+			if (lastScrollY < window.scrollY) {
+				navbar.classList.add("hidden", "transition", "delay-300");
+			} else navbar.classList.remove("hidden", "transition", "delay-300");
+			lastScrollY = window.scrollY;
+		});
+
+		return () => window.removeEventListener("scroll", () => {});
+	}, []);
+
 	return (
 		<>
-			<div className="bg-pink-400 sticky top-0">
+			<div className="bg-pink-400 sticky top-0 navbar">
 				<div className="flex justify-between">
 					<div className="p-2">Header</div>
 					<div className="flex">

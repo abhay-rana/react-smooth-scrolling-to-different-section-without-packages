@@ -50,7 +50,9 @@ html.dark {
 		/* scroll-snap-type: y mandatory; */
 		/* this property is a parent/top/container level */
 		scroll-behavior: smooth;
-		scroll-padding-top: 50px;
+
+		scroll-padding-top: 40px;
+		/* scroll-padding-top: 40px; */
 		/* scroll-behavior works smooth for the ahref tags and the top padding works if there is the heading container at the top and we need space
 		when we moved from bottom to top */
 		overflow-y: auto;

@@ -6,7 +6,7 @@ const navLinks = ["Home", "About", "Teams", "Careers"];
 
 const Header = () => {
 	const [activeLink] = useCurrentNav(navLinks);
-	console.log(activeLink);
+
 	const goToSection = (navs) => {
 		document.getElementById(navs.toLowerCase()).scrollIntoView({ behavior: "smooth" });
 	};
@@ -15,11 +15,11 @@ const Header = () => {
 		<>
 			<div className="bg-pink-400 sticky top-0">
 				<div className="flex justify-between">
-					<div>heder</div>
+					<div className="p-2">Header</div>
 					<div className="flex">
 						{navLinks.map((navs) => {
 							return (
-								<div key={navs} className="p-2" onClick={() => goToSection(navs)}>
+								<div key={navs} className="p-2 cursor-pointer" onClick={() => goToSection(navs)}>
 									<span className={`${navs.toLowerCase() == activeLink ? "bg-violet-800 text-white p-1" : ""}`}>{navs}</span>
 								</div>
 							);
